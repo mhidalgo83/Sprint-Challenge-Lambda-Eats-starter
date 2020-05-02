@@ -1,11 +1,18 @@
 import React from "react";
+import NavBar from "./components/NavBar";
+import Form from "./components/Form";
+import Help from "./components/Help";
+import { Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div>
+      <NavBar></NavBar>
+      <Switch>
+        <Route path="/help" component={Help} />
+        <Route path="/" component={Form} />
+      </Switch>
+    </div>
   );
 };
 export default App;
