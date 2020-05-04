@@ -2,7 +2,7 @@
 
 describe("Testing form inputs", function () {
   beforeEach(function () {
-    cy.visit("http://localhost:3000/");
+    cy.visit("http://localhost:3000/pizza");
   });
   it("tests form functionality", function () {
     cy.get('[data-cy="name"]').type("Matt").should("have.value", "Matt");
